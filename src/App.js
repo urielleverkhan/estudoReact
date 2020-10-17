@@ -1,38 +1,28 @@
 import { render } from '@testing-library/react';
 import React, {Component} from 'react';
-import Membro from './componentes/membro/Membro.js'
+import Feed from './Components/Feed';
 
 class App extends Component{
-    constructor(props){
+    constructor (props){
         super(props);
         this.state = {
-            status: false
-        };
-        this.entrar = this.entrar.bind(this);
-        this.sair = this.sair.bind(this);
-    }
-    entrar(){
-        this.setState({status: true});
-    }
-    sair(){
-        this.setState({status: false});
+             feed :[{ id: 1, username: 'Naira', curtidas: 10, comentarios:2},
+                    { id: 2, username: 'Sergio', curtidas: 5, comentarios:1},
+                    { id: 3, username: 'Yuna', curtidas: 30, comentarios:25},
+                    { id: 4, username: 'Zack', curtidas: 1, comentarios:0},
+                ]
+        }
     }
     render(){
         return(
             <div>
-               {this.state.status ?
-                <div><h1> Bem vindo ao sistema</h1>
-                <button onClick={this.sair}>Sair</button>
-                </div> :
-                <div><h1>Não logado</h1>
-                <button onClick={this.entrar}>Entrar</button>
-                </div>
-
-               }
-               <div>
-                   <h2>Curso React Js</h2>
-               </div>
-                
+                {this.state.feed.map((item) => {
+                    
+                    return(
+                        <Feed key={item.id} username={item.username} curtidas={item.curtidas} comentarios={item.comentarios}/>
+                    );
+                })}
+              
             </div>
         );
     }
