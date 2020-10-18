@@ -1,10 +1,10 @@
-
 import React, {Component} from 'react';
-import './estilo.css';
-import Routes from './routes';
+import '../../estilo.css';
+import {Link} from 'react-router-dom';
 
 
-class App extends Component{
+
+class Sobre extends Component{
     constructor(props){
         super(props);
         this.state ={
@@ -16,9 +16,8 @@ class App extends Component{
     render(){
         return(
             <div className="container">
-                
-                <Routes/>
-            
+                Minha sobre
+                <Link to="/">Ir Para Home</Link>
                
             </div>
         );
@@ -26,4 +25,4 @@ class App extends Component{
 
 }
 
-export default App;
+export default Sobre;

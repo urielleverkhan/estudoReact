@@ -1,10 +1,10 @@
 
 import React, {Component} from 'react';
-import './estilo.css';
-import Routes from './routes';
+import '../../estilo.css';
+import {Link} from 'react-router-dom';
 
 
-class App extends Component{
+class Header extends Component{
     constructor(props){
         super(props);
         this.state ={
@@ -16,9 +16,9 @@ class App extends Component{
     render(){
         return(
             <div className="container">
-                
-                <Routes/>
-            
+               <h1>Header Meu projeto</h1><br/>
+               <Link to="/Sobre">Ir para sobre</Link>
+                <hr/>
                
             </div>
         );
@@ -26,4 +26,4 @@ class App extends Component{
 
 }
 
-export default App;
+export default Header;
