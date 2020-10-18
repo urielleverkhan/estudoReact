@@ -1,10 +1,10 @@
-
 import React, {Component} from 'react';
 import '../../estilo.css';
 import {Link} from 'react-router-dom';
 
 
-class Header extends Component{
+
+class Erro extends Component{
     constructor(props){
         super(props);
         this.state ={
@@ -16,9 +16,9 @@ class Header extends Component{
     render(){
         return(
             <div className="container">
-               <h1>Header Meu projeto</h1><br/>
-               <Link to="/">Home</Link>
-                <hr/>
+                <h3>Pagina não encontrada<br/></h3>
+                <Link to="/">Home</Link><br/>
+                <Link to="/sobre">Sobre</Link>
                
             </div>
         );
@@ -26,4 +26,4 @@ class Header extends Component{
 
 }
 
-export default Header;
+export default Erro;
