@@ -1,22 +1,16 @@
 import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Home from './Components/Home';
-import Sobre from './Components/Sobre';
-import Header from './Components/Header';
-import Erro from './Components/Erro';
-import Produto from './Components/Produto';
+import Home from './Pages/Home';
+import Header from './Componentes/Header';
 
 
 const Routes = () =>
 {
     return(
         <BrowserRouter>
-            <Header/>
+            <Header />
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/Sobre" component={Sobre} />
-                <Route path="/Produto/:id" component={Produto} />
-                <Route path="*" component={Erro} />
+              <Route exact path="/" component={Home}/>
             </Switch>
         </BrowserRouter>
     );
