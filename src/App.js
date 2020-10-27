@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {Container, Head, BemVindo} from './styles'
+import Routes from './routes';
 
 
 
@@ -8,16 +8,10 @@ class App extends Component{
     
     render(){
         return(
-            <Container>
-               <Head> 
-                   <a>Projeto Styled</a>
-                </Head>
-
-                <BemVindo cor="00ff00" tamanho="40px"> 
-                    Bem vindo ao meu sistema
-                </BemVindo>
+            <div className="app">
+                <Routes />
  
-            </Container>
+            </div>
         );
     }
 
