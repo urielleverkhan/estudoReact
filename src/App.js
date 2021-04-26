@@ -1,25 +1,16 @@
 
 import React, {Component} from 'react';
-import './estilo.css';
 import Routes from './routes';
 
 
-class App extends Component{
-    constructor(props){
-        super(props);
-        this.state ={
-           
-        };
 
-    }
+class App extends Component{
     
     render(){
         return(
             <div className="app">
-                
-               <Routes />
-            
-               
+                <Routes />
+ 
             </div>
         );
     }
@@ -27,3 +18,16 @@ class App extends Component{
 }
 
 export default App;
+
+
+/*
+<div className="Container">
+    <header className="header">
+        <a className="titulo"> Projeto Styled</a>
+    </header>
+             
+
+    <h1> Bem vindo ao sistema</h1>
+ 
+</div>
+ */
